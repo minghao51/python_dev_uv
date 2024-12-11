@@ -1,0 +1,20 @@
+{
+    "name": "Data Engineering Environment",
+    "dockerFile": "Dockerfile",
+    "context": "..",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "charliermarsh.ruff",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    },
+    "forwardPorts": [
+        3000 // 4321,
+        // 8888
+    ],
+    "postCreateCommand": "uv sync && . .venv/bin/activate"
+} 
